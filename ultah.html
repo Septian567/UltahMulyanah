@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selamat Ulang Tahun Teh Mulyanah!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Gaya untuk menghias halaman */
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      h2 {
+        color: #4154bb;
+        font-size: 2em;
+        margin-top: 50px;
+      }
+
+      p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin-top: 30px;
+      }
+
+      #pesan {
+        margin: 20px;
+        text-align: justify;
+        font-size: 1.2em;
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h2>Selamat Ulang Tahun, Teh Mulyanah!</h2>
+    <br />
+    <p>Pesan - pesan untuk teh Mulyanah</p>
+
+    <button onclick="mulai()">Klik untuk melihat pesan</button>
+    <p id="pesan"></p>
+
+    <script>
+     let pesanList = [
+        'Oh Mahasiswi Biologi yang dikenal sejak 5 tahun lalu',
+        'Meski tak terlalu dekat namun senantiasa diingat',
+        'Kau telah menapaki perjalanan panjang sebagai mahasiswi',
+
+        'Dan hari ini, ulang tahunmu tiba',
+        ' ',
+        'Kuucapkan selamat ulang tahun, semoga sukses di segala bidang',
+        'Berkah dan keberkahan senantiasa tercurah dalam langkahmu',
+        'Sambut usia baru dengan kebahagiaan dan keceriaan yang tulus',
+        'Dan raihlah semua impian yang pernah diharapkan',
+        ' ',
+        'Biologi yang kau pelajari mungkin hanya sebuah bidang',
+        'Namun makna kehidupan yang terkandung sungguh sangat dalam',
+        'Semoga ilmu yang telah kau dapatkan',
+        'Dapat kau manfaatkan dan kembangkan',
+        ' ',
+        'Kembali ke tempatmu dulu kini tak lagi mungkin',
+        'Namun kenangan masa lalu senantiasa terukir dalam ingatan',
+        'Semoga hari ulang tahunmu hari ini',
+        'Menjadi hari yang istimewa dan tak terlupakan',
+
+        'Selamat ulang tahun, Mahasiswi Biologi yang dikenal sejak 5 tahun lalu.',
+      ]
+     let pesanIndex = 0
+     let pesanElement = document.getElementById('pesan')
+
+     function tampilkanPesan() {
+  if (pesanIndex < pesanList.length) {
+    pesanElement.innerHTML += pesanList[pesanIndex] + '<br>';
+    pesanIndex++;
+    pesanElement.lastElementChild.scrollIntoView();
+  }
+}
+
+
+      function mulai() {
+        setInterval(tampilkanPesan,4000)
+      }
+    </script>
+  </body>
+</html>
