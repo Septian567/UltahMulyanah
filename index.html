@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Selamat Ulang Tahun Teh Mulyanah!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       /* Gaya untuk menghias halaman */
       body {
@@ -32,7 +32,7 @@
 
       #pesan {
         margin: 20px;
-        text-align: justify;
+        text-align: center;
         font-size: 1.2em;
       }
     </style>
@@ -48,44 +48,32 @@
     <p id="pesan"></p>
 
     <script>
-     let pesanList = [
-        'Oh Mahasiswi Biologi yang dikenal sejak 5 tahun lalu',
-        'Meski tak terlalu dekat namun senantiasa diingat',
-        'Kau telah menapaki perjalanan panjang sebagai mahasiswi',
-
-        'Dan hari ini, ulang tahunmu tiba',
-        ' ',
-        'Kuucapkan selamat ulang tahun, semoga sukses di segala bidang',
-        'Berkah dan keberkahan senantiasa tercurah dalam langkahmu',
-        'Sambut usia baru dengan kebahagiaan dan keceriaan yang tulus',
-        'Dan raihlah semua impian yang pernah diharapkan',
-        ' ',
-        'Biologi yang kau pelajari mungkin hanya sebuah bidang',
-        'Namun makna kehidupan yang terkandung sungguh sangat dalam',
-        'Semoga ilmu yang telah kau dapatkan',
-        'Dapat kau manfaatkan dan kembangkan',
-        ' ',
-        'Kembali ke tempatmu dulu kini tak lagi mungkin',
-        'Namun kenangan masa lalu senantiasa terukir dalam ingatan',
-        'Semoga hari ulang tahunmu hari ini',
-        'Menjadi hari yang istimewa dan tak terlupakan',
-
-        'Selamat ulang tahun, Mahasiswi Biologi yang dikenal sejak 5 tahun lalu.',
+      let pesanList = [
+        'Saat pertama mengenal mu dulu',
+        'Aku tahu namamu adalah Mulyanah',
+        'Dan kuliah jurusan Biologi',
+        'Sejak pertama mengenal mu dulu',
+        'ada satu kalimat yang ingin aku ucapkan pada mu',
+        'namun aku belum menemukan waktu yang tepat sejak dulu',
+        'aku rasa malam ini adalah waktu yang tepat',
+        'untuk mengucapkan kalimat itu padamu',
+        'kalimat itu adalah:',
+        "'Selamat Ulang Tahun Teh Mulyanah ....',",
+        'sekian dan wassalam.',
       ]
-     let pesanIndex = 0
-     let pesanElement = document.getElementById('pesan')
+      let pesanIndex = 0
+      let pesanElement = document.getElementById('pesan')
 
-     function tampilkanPesan() {
-  if (pesanIndex < pesanList.length) {
-    pesanElement.innerHTML += pesanList[pesanIndex] + '<br>';
-    pesanIndex++;
-    pesanElement.lastElementChild.scrollIntoView();
-  }
-}
-
+      function tampilkanPesan() {
+        if (pesanIndex < pesanList.length) {
+          pesanElement.innerHTML += pesanList[pesanIndex] + '<br>'
+          pesanIndex++
+          pesanElement.lastElementChild.scrollIntoView()
+        }
+      }
 
       function mulai() {
-        setInterval(tampilkanPesan,2000)
+        setInterval(tampilkanPesan, 2000)
       }
     </script>
   </body>
